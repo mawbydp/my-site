@@ -31,6 +31,8 @@ jobs:
 
       - name: Deploy to GitHub Pages
         env:
-          GIT_USER: ${{ github.actor }}
+          USE_SSH: false
+          GIT_USER: github-actions[bot]
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run deploy
+
